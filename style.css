@@ -1,16 +1,44 @@
-.my-title {
+header{
     background-color: blueviolet;
-    color: blanchedalmond;
+    color: yellow;
     text-align: center;
     padding: 15px;
-}
+} 
 .animal-btn {
-    background-color: rgb(65, 252, 8);
-    color: blueviolet;
+    background-color: blueviolet;
+    color: yellow;
     
 
 }
-.container {
-    margin-right: 60px;
-    float: right;
+.penguin, .my-title {
+    display: inline;
+    text-align: center;
+    padding: 15px;
+    /* background-color: blueviolet; */
+    /* color: blanchedalmond; */
+
 }
+.container {
+    border-radius: 20px;
+    margin-top: 20px;
+    background-color: yellow;
+    color: blueviolet;
+    padding-bottom: 20px;
+}
+body {
+    background-color: rgb(194, 150, 231);
+}
+#find-animal {
+    background-color: blueviolet;
+    color: yellow;
+
+}
+#animal-input {
+    background-color: yellow;
+    border-radius: 10px;
+}
+.other {
+    background-color: rgb(194, 150, 231);
+   
+}
+
