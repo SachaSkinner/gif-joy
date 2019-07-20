@@ -66,6 +66,7 @@ function giphySearch(value) {
                 var ratingUrl = response.data[i].rating;
 
                 var div = $("<div>");
+                div.addClass("floatDiv");
 
                 var rating = $("<span>");
                 rating.text("Rating: " + ratingUrl);                
@@ -80,8 +81,12 @@ function giphySearch(value) {
 
                 div.append(image);
                 div.append(rating);
+                var br = $("<br>")
+               
 
-                $("#images").append(div);  
+                
+                $("#images").append(div); 
+                $("#images").append(br); 
 
 
             }

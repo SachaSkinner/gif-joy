@@ -21,9 +21,11 @@ header{
 .container {
     border-radius: 20px;
     margin-top: 20px;
-    background-color: yellow;
+    background-color: rgb(245, 245, 69);
     color: blueviolet;
     padding-bottom: 20px;
+    border: 3px solid;
+    border-color: blueviolet;
 }
 body {
     background-color: rgb(194, 150, 231);
@@ -39,6 +41,10 @@ body {
 }
 .other {
     background-color: rgb(194, 150, 231);
+    border-color: rgb(194, 150, 231);
    
+}
+.floatDiv {
+    float: left;
 }
 
