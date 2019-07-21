@@ -30,8 +30,7 @@ $("#find-animal").on("click", function (event) {
     array.push(animal)
     giphySearch(animal);
     LoadButtons();
-    // animal.reset();
-    // $("#animal-input")[0].reset();
+    // reset this form to an empty one
     document.getElementById('animal-input').value=null;
 });
 
@@ -84,13 +83,13 @@ function giphySearch(value) {
                 image.addClass("image");
 
                 div.append(image);
-                div.append(rating);
-                var br = $("<br>")
+                div.prepend(rating);
+                // var br = $("<br>")
                
 
                 
                 $("#images").append(div); 
-                $("#images").append(br); 
+                // $("#images").append(br); 
 
 
             }

@@ -47,5 +47,9 @@ body {
 .floatDiv {
     
     float: left;
+    margin: 15px;
+}
+.image {
+    display: block;
 }
 
