@@ -66,7 +66,7 @@ function giphySearch(value) {
 
                 var stillUrl = response.data[i].images.fixed_height_still.url;
                 var animateUrl = response.data[i].images.fixed_height.url;
-                var ratingUrl = response.data[i].rating;
+                var ratingUrl = response.data[i].rating.toUpperCase();
 
                 var div = $("<div>");
                 div.addClass("floatDiv");
