@@ -25,10 +25,14 @@ $("#find-animal").on("click", function (event) {
 
     // Here we grab the text from the input box
     var animal = $("#animal-input").val();
-
+    // $("#animal-input").empty();
+    
     array.push(animal)
     giphySearch(animal);
     LoadButtons();
+    // animal.reset();
+    // $("#animal-input")[0].reset();
+    document.getElementById('animal-input').value=null;
 });
 
 function LoadButtons() {
