@@ -52,4 +52,7 @@ body {
 .image {
     display: block;
 }
-
+#images {
+    text-align: center;
+  
+}

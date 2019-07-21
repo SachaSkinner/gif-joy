@@ -1,4 +1,4 @@
-var array = ["penguin", "monkey", "cat", "lion", "dog", "horse"];
+var array = ["penguin", "monkey", "cat", "lion", "dog", "horse", "hamster"];
 var click = 0;
 
 LoadButtons();
