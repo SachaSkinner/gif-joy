@@ -52,6 +52,7 @@ body {
 .image {
     display: block;
     cursor: pointer;
+    margin: 0 auto;
 }
 #images {
     text-align: center;
@@ -59,4 +60,11 @@ body {
 }
 button {
     margin: 5px;
+}
+.button-for-favorites {
+    background-color: rgb(245, 245, 69);
+    color: blueviolet;
+}
+.bold {
+    font-weight: 700;
 }

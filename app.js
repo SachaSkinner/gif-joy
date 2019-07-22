@@ -6,15 +6,7 @@ LoadButtons();
 $(document).on("click", ".animal-btn", function () {
     var pet = $(this).val();
     giphySearch(pet)
-})
-
-
-$(document).on("click", ".image", function () {
-    console.log("You clilcked me")
-
-
-
-})
+});
 
 // This .on("click") function will trigger the AJAX Call
 $("#find-animal").on("click", function (event) {
@@ -26,12 +18,19 @@ $("#find-animal").on("click", function (event) {
     // Here we grab the text from the input box
     var animal = $("#animal-input").val();
     // $("#animal-input").empty();
+    if (animal.length < 2) {
+        alert("Your string should be longer!:)");
+    } else if (array.includes(animal)) {
+        alert("This animal is already in the list!:)")
+    } else {
+        array.push(animal)
+        giphySearch(animal);
+        LoadButtons();
+        // reset this form to an empty one
+    }
     
-    array.push(animal)
-    giphySearch(animal);
-    LoadButtons();
-    // reset this form to an empty one
-    document.getElementById('animal-input').value=null;
+    document.getElementById('animal-input').value = null;
+
 });
 
 function LoadButtons() {
@@ -67,13 +66,20 @@ function giphySearch(value) {
                 var stillUrl = response.data[i].images.fixed_height_still.url;
                 var animateUrl = response.data[i].images.fixed_height.url;
                 var ratingUrl = response.data[i].rating.toUpperCase();
+                var title = response.data[i].title.toUpperCase();
+                title = title.replace("GIF", "");
+                var pForTitle = $("<p>");
+                pForTitle.addClass("bold");
+                pForTitle.append(title);
+
+
 
                 var div = $("<div>");
                 div.addClass("floatDiv");
 
                 var rating = $("<span>");
-                rating.text("Rating: " + ratingUrl);                
-                
+                rating.text("Rating: " + ratingUrl);
+
                 var image = $("<img>");
                 // Setting the src attribute to stillUrl
                 image.attr("src", stillUrl);
@@ -84,11 +90,16 @@ function giphySearch(value) {
 
                 div.append(image);
                 div.prepend(rating);
+                div.prepend(pForTitle);
                 // var br = $("<br>")
-               
+                var button_for_favorites = $("<button>")
+                button_for_favorites.text("Add to favorites");
+                div.append(button_for_favorites);
+                button_for_favorites.addClass("button-for-favorites");
 
-                
-                $("#images").append(div); 
+
+
+                $("#images").append(div);
                 // $("#images").append(br); 
 
 
@@ -96,9 +107,9 @@ function giphySearch(value) {
 
             $(".image").on("click", function () {
                 var state = $(this).attr("state");
-                
+
                 if (state === "still") {
-                    $(this).attr("src", $(this).attr("src-animate"));                        
+                    $(this).attr("src", $(this).attr("src-animate"));
                     $(this).attr("state", "animate");
                 } else {
                     $(this).attr("src", $(this).attr("src-still"));
