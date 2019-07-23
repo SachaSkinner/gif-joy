@@ -97,13 +97,26 @@ function giphySearch(value) {
                 div.append(button_for_favorites);
                 button_for_favorites.addClass("button-for-favorites");
 
+                
+
 
 
                 $("#images").append(div);
-                // $("#images").append(br); 
+                
+                
 
 
             }
+            // for favorites
+            $(".button-for-favorites").on("click",function(){
+                alert("hi");
+              
+
+
+            })
+           
+
+
 
             $(".image").on("click", function () {
                 var state = $(this).attr("state");

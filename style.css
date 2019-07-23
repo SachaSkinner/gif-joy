@@ -68,3 +68,8 @@ button {
 .bold {
     font-weight: 700;
 }
+.favorites {
+    color: blueviolet;
+    background-color: pink;
+    border-radius: 10px;
+}
