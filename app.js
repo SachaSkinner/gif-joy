@@ -21,7 +21,7 @@ $("#find-animal").on("click", function (event) {
     if (animal.length < 2) {
         alert("Your string should be longer!:)");
     } else if (array.includes(animal)) {
-        alert("This animal is already in the list!:)")
+        alert("This item is already in the list!:)")
     } else {
         array.push(animal)
         giphySearch(animal);
@@ -92,10 +92,10 @@ function giphySearch(value) {
                 div.prepend(rating);
                 div.prepend(pForTitle);
                 // var br = $("<br>")
-                var button_for_favorites = $("<button>")
-                button_for_favorites.text("Add to favorites");
-                div.append(button_for_favorites);
-                button_for_favorites.addClass("button-for-favorites");
+                // var button_for_favorites = $("<button>")
+                // button_for_favorites.text("Add to favorites");
+                // div.append(button_for_favorites);
+                // button_for_favorites.addClass("button-for-favorites");
 
 
 
