@@ -95,8 +95,13 @@ function giphySearch(value) {
                 var button_for_favorites = $("<button>")
                 button_for_favorites.text("Add to favorites");
                 div.append(button_for_favorites);
-                button_for_favorites.addClass("button-for-favorites");
 
+                // favorites
+                button_for_favorites.addClass("button-for-favorites");
+                button_for_favorites.attr("src-animate", animateUrl);
+                button_for_favorites.attr("src", stillUrl);
+                button_for_favorites.attr("state", "still");
+                button_for_favorites.attr("src-still", stillUrl);
                 
 
 
@@ -109,7 +114,11 @@ function giphySearch(value) {
             }
             // for favorites
             $(".button-for-favorites").on("click",function(){
-                alert("hi");
+
+
+                $(".favorite-images").append(this);
+               localStorage("imageUrl", animateUrl)
+               
               
 
 
