@@ -12,7 +12,7 @@ $(document).on("click", ".animal-btn", function () {
 $("#find-animal").on("click", function (event) {
 
     // event.preventDefault() can be used to prevent an event's default behavior.
-    // Here, it prevents the submit button from trying to submit a form when clicked
+    // Here, it prevents the submit button from trying to submit a Tform when clicked
     event.preventDefault();
 
     // Here we grab the text from the input box
@@ -26,9 +26,9 @@ $("#find-animal").on("click", function (event) {
         array.push(animal)
         giphySearch(animal);
         LoadButtons();
-        // reset this form to an empty one
     }
     
+    // reset this form to an empty one
     document.getElementById('animal-input').value = null;
 
 });
@@ -59,7 +59,7 @@ function giphySearch(value) {
         // After the data from the AJAX request comes back
         .then(function (response) {
             // Saving the image_original_url property
-            console.log(response);
+            // console.log(response);
 
             for (var i = 0; i < response.data.length; i++) {
 
@@ -91,16 +91,12 @@ function giphySearch(value) {
                 div.append(image);
                 div.prepend(rating);
                 div.prepend(pForTitle);
-                // var br = $("<br>")
-                // var button_for_favorites = $("<button>")
-                // button_for_favorites.text("Add to favorites");
-                // div.append(button_for_favorites);
-                // button_for_favorites.addClass("button-for-favorites");
+                
 
 
 
                 $("#images").append(div);
-                // $("#images").append(br); 
+               
 
 
             }
